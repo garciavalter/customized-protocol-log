@@ -1,0 +1,23 @@
+{
+  "name": "customized-protocol-log",
+  "version": "1.0.0",
+  "description": "An customized application to log protocols.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garciavalter/customized-protocol-log.git"
+  },
+  "author": "Valter Roberto Garcia Junior",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/garciavalter/customized-protocol-log/issues"
+  },
+  "homepage": "https://github.com/garciavalter/customized-protocol-log#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
