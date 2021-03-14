@@ -1,6 +1,7 @@
-const protocol = require('../models/protocol-model');
+const Protocols = require('../models/protocol-model');
+const mongoose = require('mongoose');
 
-let data = [
+/*let data = [
     {
         protocol: 1,
         register:"2010-20019",
@@ -17,17 +18,19 @@ let data = [
         name: "Aloisio Siqueira"
     },
 ]
-
+*/
 module.exports = function(app, authCheck){
 
     app.get('/', authCheck, (req,res) => {
    
-        res.render('dashboard',  {protocols: data});
-    
+        Protocols.find({}, function(err, data){
+            if (err) throw err;
+            res.render('dashboard',  {protocols: data});
+        });
     });
      
     app.post('dashboard', function(req, res){
-
+        res.send('you posted info');
     });
 
     app.delete('dashboard', function(req,res){

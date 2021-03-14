@@ -25,7 +25,7 @@ app.use(passport.session());
 
 
 mongoose.connect(keys.mongodb.dbURI, () => {
-    console.log('connected to mongoodb');
+    console.log('connected to mongoodb Users');
 });
 // set up routes
 
