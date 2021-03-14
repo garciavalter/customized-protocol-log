@@ -16,18 +16,20 @@ const port = 3000;
 app.set('view engine', 'ejs');
 
 app.use(cookieSession({
-    maxAge: 24 * 60 * 60 *1000,
+    maxAge: 24 * 60 * 60 * 1000,
     keys: [keys.session.cookieKey]
-}))
+}));
 
 app.use(passport.initialize());
 app.use(passport.session());
+
 
 mongoose.connect(keys.mongodb.dbURI, () => {
     console.log('connected to mongoodb');
 });
 // set up routes
 
+app.use(express.static(__dirname + '/public'));
 app.use('/auth', authRoutes);
 app.use('/profile', profileRoutes);
 

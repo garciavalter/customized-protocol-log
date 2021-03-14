@@ -3,25 +3,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+
     <title>Home</title>
 </head>
 <body>
-    <nav>
-        <ul>
-            <% if (user) {%>
-            <li><a href="/auth/logout">Logout</a></li>
-            <% } else { %>
-            <li><a href="/auth/login">Login</a></li>
-            <% } %>
-            <li><a href="/">Home</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Registro de Protocolos</h1>
-        <h2>Index</h2>
-    </header>
-    <main>
-        <p>Acesse para registrar procotolos</p>
-    </main>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Login </h2>
+          <h2 class="inactive underlineHover">Cadastrar </h2>
+       
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuário">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="Senha">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+            <a class="google-btn" href="/auth/google"> Login com Google</a>
+          </form>
+      
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" href="#">Esqueceu sua senha?</a>
+          </div>
+      
+        </div>
+      </div>
 </body>
 </html>
