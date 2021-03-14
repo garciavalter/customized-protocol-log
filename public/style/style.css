@@ -9,13 +9,15 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
-}
+  background-color: #008c91 !important;
+ }
 
 a {
   color: #008c91;
   display:inline-block;
   text-decoration: none;
   font-weight: 400;
+  
 }
 
 h2 {
@@ -38,6 +40,17 @@ h2 {
   width: 100%;
   min-height: 100%;
   padding: 20px;
+}
+.container{
+  max-width: 400px;
+}
+
+.alunos li{
+  background: #00a6ac;
+}
+
+.icons{
+  cursor: pointer;
 }
 
 #formContent {
