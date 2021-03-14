@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const protocolController = require('./controllers/protocolController')
 
 const app = express();
 
@@ -40,3 +41,7 @@ app.get('/', (req, res) => {
 app.listen(port,()=> {
     console.log('app now listening for request on port ' + port);
 });
+
+// fire controllers
+
+protocolController(app);
