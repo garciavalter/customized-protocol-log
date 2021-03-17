@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/style/style.css">
+    <script src="https://kit.fontawesome.com/28c6ab9790.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Dashboard 1.0</title>
+</head>
+<body>
+    <div class="container">
+
+        <header class="text-center text-light my-4">
+            <h1 class="mb-4">Cadastro de Protocolos</h1>
+            <form class="search">
+                <input type="text" class="form-control m-auto" name="search" placeholder="Matrícula / Nome do Aluno">
+            </form>
+        
+         </header>
+
+        <ul class="list-group alunos mx-auto text-light">
+            <li class="list-group-item d-flex justify-content-between align-items-center header">
+                <div class="d-flex flex-row col-10">
+                    <div class="protocol col-2 p-2">Protocolo</div>
+                    <div class="matricula col-3 p-2">Matrícula</div>
+                    <div class="aluno col-10 p-2">Aluno</div>
+                </div>
+            </li>
+            <% for(var i=0; i < protocols.length; i++) { %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex flex-row col-10">
+                    <div class="protocol col-2 p-2"><%= protocols[i].protocol %></div>
+                    <div class="matricula col-3 p-2"><%= protocols[i].register %></div>
+                    <div class="aluno col-10 p-2"><%= protocols[i].name %></div>
+                </div>
+                
+                <div>
+                    <i class="far fa-eye view icons"></i>
+                    <i class="fas fa-edit edit icons"></i>
+                    <i class="far fa-trash-alt delete icons"></i>
+                    
+            </li>
+             <% } %>
+        </ul>
+        <div class="d-flex flex-row p-4 justify-content-around">
+            <a href="/dashboard/import"><button class="btn-dashboard">Cadastrar</button/></a>
+        </div>
+    </div>
+</body>
+</html>

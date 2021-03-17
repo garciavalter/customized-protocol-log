@@ -8,14 +8,14 @@ const authCheck = (req,res, next) => {
     } else {
         next();
     }
-}
+};
 
-router.get('/', authCheck, (req, res) => {
-    dashboardController(req,res);
+router.get('/', authCheck, (req,res) => {
+    retrieveData(req, res);
 });
 
 router.get('/import', authCheck, (req,res) => {
-    res.send('You reached to import page');
-});
+    res.render('import');
+})
 
 module.exports = router;
