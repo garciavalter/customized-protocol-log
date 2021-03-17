@@ -30,6 +30,20 @@ h2 {
   color: #cccccc;
 }
 
+button{
+  background-color: #00a6ac;
+  border: none;
+  color: white;
+  padding: 15px 65px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px !important;
+  margin: 5px 5px 5px 5px;
+}
+
 /* STRUCTURE */
 
 .wrapper {
@@ -51,6 +65,11 @@ h2 {
 
 .icons{
   cursor: pointer;
+}
+
+.btn-import {
+  background-color: #00a6ac !important;
+  color: white !important;
 }
 
 #formContent {
